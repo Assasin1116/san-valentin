@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("fondo-carta.png") no-repeat center center;
+  background-size: 900px 900px;
+  font-family: "Dancing Script", cursive;
+  color: #fff;
+  overflow: hidden;
+}
+
+.carta {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.animated-text {
+  font-size: 3rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.botones {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#si {
+  background: #4caf50;
+  color: white;
+}
+
+#no {
+  background: #f44336;
+  color: white;
+}
+
+#no:hover {
+  position: absolute;
+  left: calc(50% + 100px);
+  top: calc(50% + 50px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgb(146, 142, 142);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 500px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
